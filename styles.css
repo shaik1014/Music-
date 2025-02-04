@@ -85,9 +85,9 @@ body {
 
 
 
-.buttons{
+.buttons {
   width: 50px;
-  height: 160px;
+  height: 50px;
   background-color: #238965;
   border-radius: 20px;
   display: flex;
@@ -96,18 +96,34 @@ body {
   align-items: center;
   margin: 10px;
   cursor: pointer;
-
 }
 
-.button{
+.animate {
+  animation: expand 1s ease-in-out;
+  height: 160px;  
+}
+
+@keyframes expand {
+  from {
+      height: 50px;
+  }
+  to {
+      height: 160px;
+  }
+}
+
+.button {
   width: 40px;
   height: 40px;
-  background-color:#205744;
+  background-color: #205744;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   border-radius: 50%;
+  
 }
+
+
 
