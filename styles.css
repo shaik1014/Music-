@@ -88,7 +88,8 @@ body {
 .buttons {
   width: 50px;
   height: 50px;
-  background-color: #238965;
+  background-color: #000000;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -96,10 +97,11 @@ body {
   align-items: center;
   margin: 10px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .animate {
-  animation: expand 1s ease-in-out;
+  animation: expand 0.5s ease-in-out;
   height: 160px;  
 }
 
@@ -115,7 +117,7 @@ body {
 .button {
   width: 40px;
   height: 40px;
-  background-color: #205744;
+  background-color: #000000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -125,5 +127,11 @@ body {
   
 }
 
+.button i{
+  font-size: 20px;
+}
 
+.hidden{
+  display: none;
+}
 
