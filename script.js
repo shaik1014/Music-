@@ -1,37 +1,15 @@
-
-
-const menu = document.getElementById('menu');
-const buttons = document.getElementById('buttons');
-const button =document.querySelectorAll('.button');
-
-menu.addEventListener('click', () => {
-    
-    if(buttons.classList.contains('animate'))
-    {
-        buttons.classList.remove('animate');
-
-        button.forEach(button => {
-
-            if(button!==menu){
-
-                 button.classList.add('hidden');
-            }
-           
-        })
-    
-    }
-
-    else
-    {
-        buttons.classList.add('animate');
-
-        button.forEach(button => {
-            if(button!==menu){
-
-                button.classList.remove('hidden');
-            }
-        });
-    }
-
-
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.getElementById("menu");
+    const buttons = document.getElementById("buttons");
+    const buttonElements = document.querySelectorAll(".button");
+  
+    menu.addEventListener("click", () => {
+      buttons.classList.toggle("animate");
+  
+      buttonElements.forEach((button) => {
+        if (button !== menu) {
+          button.classList.toggle("hidden");
+        }
+      });
+    });
+  });
