@@ -10,17 +10,15 @@ body {
   min-height: 100vh;
   top: 0;
   display: flex;
+  box-sizing: border-box;
   
 }
 
 .main-content {
   width: calc(100% - 80px); 
-  margin-top: 20px;
+  padding: 20px;
   
 }
-
-
-
 
 
  .logo img {
@@ -87,7 +85,7 @@ body {
   gap: 40px;
   padding-left: 20px; 
   overflow: hidden;
-
+overflow-x: auto;
 }
 
 
@@ -133,6 +131,7 @@ body {
   font-size: 40px;
   border-radius: 50%;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .view-more i:hover{
   background-color: #3f3f3fad;
@@ -195,12 +194,7 @@ body {
   display: none;
 }
 
-.container{
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
 
-}
 
 .section{
   display: grid;
@@ -212,7 +206,6 @@ body {
   color: white;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  margin-left: 20px;
 }
 
 .category{
@@ -229,7 +222,14 @@ body {
   font-weight: bold;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+
+.category:hover {
+  transform: scale(1.05);
+}
+
 .category::before{
   content: '';
   top: 0;
